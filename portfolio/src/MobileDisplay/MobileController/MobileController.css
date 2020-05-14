@@ -1,0 +1,69 @@
+.mobileContainer {
+  position: relative;
+}
+
+#mobileNav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  z-index: 3;
+  background: darkgrey;
+}
+
+.navBtn {
+  font-size: 12px;
+  flex: 1;
+  padding: 10px !important;
+  border: none !important;
+  outline: none !important;
+  background: none !important;
+  margin-top: 0;
+}
+
+.mobileContent {
+  position: absolute;
+  top: 10vh;
+  background: rgb(22, 103, 184);
+}
+
+.mobileContactContent {
+  width: 100vw;
+  padding: 10px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.568);
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileAbout {
+  width: 100vw;
+  background: rgba(206, 216, 66, 0.89);
+  min-height: 100vh;
+}
+
+.mobileBackground {
+  top: 10vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobileSelfie {
+  width: 50%;
+  height: 50%;
+}
+
+#mobileBio {
+  color: black;
+  text-align: center;
+}
+
+.mobileBioP {
+  padding: 30px;
+}
