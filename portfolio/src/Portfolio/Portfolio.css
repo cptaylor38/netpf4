@@ -1,0 +1,72 @@
+.portfolioFullCont {
+  margin: 20px 0;
+}
+
+#portfolioTopR {
+  display: flex;
+  flex-flow: row wrap;
+  background: rgba(255, 253, 253, 0.904);
+  color: rgb(63, 61, 61);
+  padding: 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  justify-content: center;
+  align-items: center;
+}
+
+.pTopLImgs {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.portImgMain {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+#focusedImgCont {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#subImgSelectRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.subImgCont {
+  flex: 1;
+}
+
+.portImgSub {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#descriptionRow {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#linksRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1435px) {
+  #portfolioTopR {
+    flex-direction: column;
+    min-width: 100%;
+    align-content: center;
+  }
+
+  .pTopCol {
+    min-width: 100%;
+  }
+}
