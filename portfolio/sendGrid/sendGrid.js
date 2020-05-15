@@ -10,7 +10,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const router = express.Router();
 
-router.post('/contact/email', async (req, res) => {
+router.post('/email', async (req, res) => {
   try {
     const msg = {
       to: 'cylor.dev@gmail.com',
