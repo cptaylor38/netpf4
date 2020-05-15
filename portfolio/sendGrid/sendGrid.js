@@ -27,13 +27,13 @@ router.post('/.netlify/functions/sendGrid/email', async (req, res) => {
   }
 });
 
-app.get('/.netlify/functions/sendGrid/testing', (req, res)){
-    res.send('wtf');
-}
+app.get('/.netlify/functions/sendGrid/testing', (req, res) => {
+  res.send('wtf');
+});
 
 app.all('*', (req, res) => {
   console.log(req.path);
-  console.log('route not found');
+  res.json({ youSaid: req.path });
   res.sendStatus(404);
 });
 
