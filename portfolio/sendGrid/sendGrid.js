@@ -10,16 +10,17 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
+  const msg = {
+    to: 'cylor.dev@gmail.com',
+    from: 'cylor.dev@gmail.com',
+    subject: `${req.body.email}`,
+    text: `${req.body.message}`,
+    html: `<h3>${req.body.email}</h3>
+                    <h4>${req.body.subject}</h4>
+                    <p>${req.body.message}</p>`,
+  };
+
   try {
-    let msg = {
-      to: 'cylor.dev@gmail.com',
-      from: 'cylor.dev@gmail.com',
-      subject: `${req.body.email}`,
-      text: `${req.body.message}`,
-      html: `<h3>${req.body.email}</h3>
-                  <h4>${req.body.subject}</h4>
-                  <p>${req.body.message}</p>`,
-    };
     await sgMail.send(msg).then((response) => res.send(msg));
   } catch (error) {
     console.log(error);
