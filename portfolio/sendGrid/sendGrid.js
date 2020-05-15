@@ -27,15 +27,14 @@ app.post('/.netlify/functions/sendGrid/contact/email', async (req, res) => {
   }
 });
 
-// app.all('*', (req, res) => {
-//   console.log(req.path);
-//   console.log('route not found');
-//   res.sendStatus(404);
-// });
+app.all('*', (req, res) => {
+  console.log(req.path);
+  console.log('route not found');
+  res.sendStatus(404);
+});
 
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router); // path must route to lambda
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 app.listen(PORT, () => {
   console.log(`Now listening on port ${PORT}`);
