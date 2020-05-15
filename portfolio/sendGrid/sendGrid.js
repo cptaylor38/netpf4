@@ -8,6 +8,7 @@ const sgMail = require('@sendgrid/mail');
 const PORT = process.env.PORT || 5000;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
   try {
     await setTimeout(() => console.log('nothing'), 1000).then(
