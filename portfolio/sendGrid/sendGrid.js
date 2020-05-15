@@ -10,7 +10,9 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
   try {
-    res.send(req.body);
+    await setTimeout(() => console.log('nothing'), 1000).then(
+      res.send(req.body)
+    );
     // const msg = {
     //   to: 'cylor.dev@gmail.com',
     //   from: 'cylor.dev@gmail.com',
@@ -22,7 +24,7 @@ app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
     // };
     // await sgMail.send(msg).then((response) => res.send(response));
   } catch (error) {
-    console.log(error);
+    res.send(error);
   }
 });
 
