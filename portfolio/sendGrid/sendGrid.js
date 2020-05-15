@@ -16,9 +16,9 @@ app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
       from: 'cylor.dev@gmail.com',
       subject: `Portfolio alert`,
       text: `Someone has sent you a message from your portfolio.`,
-      html: `           <h3>{{email}}</h3>
-                        <h4>{{subject}}</h4>
-                        <p>{{message}}</p>`,
+      html: `           <h3>{{{email}}}</h3>
+                        <h4>{{{subject}}}</h4>
+                        <p>{{{message}}}</p>`,
       dynamic_template_data: {
         email: req.body.email,
         subject: req.body.subject,
