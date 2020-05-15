@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
@@ -22,6 +23,12 @@ app.post('/contact/email', async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+app.all('*', (req, res) => {
+  console.log(req.path);
+  console.log('route not found');
+  res.sendStatus(404);
 });
 
 module.exports.handler = serverless(app);
