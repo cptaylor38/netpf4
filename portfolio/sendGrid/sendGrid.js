@@ -31,4 +31,8 @@ app.all('*', (req, res) => {
   res.sendStatus(404);
 });
 
+app.listen(PORT, () => {
+  console.log(`Now listening on port ${PORT}`);
+});
+
 module.exports.handler = serverless(app);
