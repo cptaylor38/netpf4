@@ -7,9 +7,9 @@ const sgMail = require('@sendgrid/mail');
 const PORT = process.env.PORT || 5000;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-app.use(bodyParser.json());
+app.use(bodyParser);
 
-app.post('.netlify/functions/sendGrid/contact/email', async (req, res) => {
+app.post('/contact/email', async (req, res) => {
   try {
     const msg = {
       to: 'cylor.dev@gmail.com',
