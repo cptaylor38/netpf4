@@ -27,7 +27,7 @@ const Contact = () => {
       try {
         setFormState(false);
         await axios
-          .post('/contact/email', {
+          .post('.netlify/functions/sendGrid/contact/email', {
             email: formData.email,
             subject: formData.subject,
             message: formData.message,
