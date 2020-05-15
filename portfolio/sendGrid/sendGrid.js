@@ -10,7 +10,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const router = express.Router();
 
-app.post('/contact/email', async (req, res) => {
+app.post('.netlify/functions/sendGrid/contact/email', async (req, res) => {
   try {
     const msg = {
       to: 'cylor.dev@gmail.com',
