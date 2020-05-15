@@ -23,7 +23,7 @@ app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
 
     await sgMail.send(msg).then((response) => res.send(response));
   } catch (error) {
-    res.send(error);
+    console.log(error, req.body);
   }
 });
 
