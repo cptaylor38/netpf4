@@ -24,7 +24,7 @@ const msg = {
 
 const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', (req, res) => {
-  res.send(`${req.body.email}, ${req.body.subject}, ${req.body.message}`);
+  res.send(JSON.stringify(req));
   //   try {
   //     email = `${req.body.email}`;
   //     subject = `${req.body.subject}`;
