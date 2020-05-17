@@ -12,22 +12,19 @@ let email = '';
 let subject = '';
 let message = '';
 
-const msg = {
-  to: 'cylor.dev@gmail.com',
-  from: 'cylor.dev@gmail.com',
-  subject: `Portfolio alert`,
-  text: 'Someone has sent you a message from your portfolio.',
-  html: `<h2>${email}</h2>
-          <h3>${subject}</h3>
-          <h4>${message}</h4>`,
-};
 app.use(bodyParser.json());
 const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', (req, res) => {
   try {
-    email = `${req.body.email}`;
-    subject = `${req.body.subject}`;
-    message = `${req.body.message}`;
+    let msg = {
+      to: 'cylor.dev@gmail.com',
+      from: 'cylor.dev@gmail.com',
+      subject: `Portfolio alert`,
+      text: 'Someone has sent you a message from your portfolio.',
+      html: `<h2>${req.body.email}</h2>
+                <h3>${req.body.subject}</h3>
+                <h4>${req.body.message}</h4>`,
+    };
     sgMail.send(msg).then((response) => res.send(msg));
   } catch (error) {
     console.log(error);
