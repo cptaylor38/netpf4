@@ -8,32 +8,26 @@ const sgMail = require('@sendgrid/mail');
 const PORT = process.env.PORT || 5000;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// let email = '';
-// let subject = '';
-// let message = '';
+let email = '';
+let subject = '';
+let message = '';
 
-// const msg = {
-//   to: 'cylor.dev@gmail.com',
-//   from: 'cylor.dev@gmail.com',
-//   subject: `Portfolio alert`,
-//   text: 'Someone has sent you a message from your portfolio.',
-//   html: `<h2>${email}</h2>
-//           <h3>${subject}</h3>
-//           <h4>${message}</h4>`,
-// };
+const msg = {
+  to: 'cylor.dev@gmail.com',
+  from: 'cylor.dev@gmail.com',
+  subject: `Portfolio alert`,
+  text: 'Someone has sent you a message from your portfolio.',
+  html: `<h2>${email}</h2>
+          <h3>${subject}</h3>
+          <h4>${message}</h4>`,
+};
 
 const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', (req, res) => {
   try {
-    const msg = {
-      to: 'cylor.dev@gmail.com',
-      from: 'cylor.dev@gmail.com',
-      subject: `Portfolio alert`,
-      text: 'Someone has sent you a message from your portfolio.',
-      html: `<h2>${req.body.email}</h2>
-                    <h3>${req.body.subject}</h3>
-                    <h4>${req.body.message}</h4>`,
-    };
+    email = `${req.body.email}`;
+    subject = `${req.body.subject}`;
+    message = `${req.body.message}`;
     sgMail.send(msg).then((response) => res.send(msg));
   } catch (error) {
     console.log(error);
