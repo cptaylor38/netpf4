@@ -24,14 +24,15 @@ const msg = {
 
 const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', (req, res) => {
-  try {
-    email = `${req.body.email}`;
-    subject = `${req.body.subject}`;
-    message = `${req.body.message}`;
-    sgMail.send(msg).then((response) => res.send(msg));
-  } catch (error) {
-    console.log(error);
-  }
+  res.send(`${req.body.email}, ${req.body.subject}, ${req.body.message}`);
+  //   try {
+  //     email = `${req.body.email}`;
+  //     subject = `${req.body.subject}`;
+  //     message = `${req.body.message}`;
+  //     sgMail.send(msg).then((response) => res.send(msg));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
 });
 
 app.get('/.netlify/functions/sendGrid/testing', (req, res) => {
