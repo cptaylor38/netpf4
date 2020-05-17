@@ -21,10 +21,10 @@ const msg = {
           <h3>${subject}</h3>
           <h4>${message}</h4>`,
 };
-
+app.use(bodyParser.json());
 const router = express.Router();
 app.post('/.netlify/functions/sendGrid/email', (req, res) => {
-  res.send(req);
+  res.send(req.body);
   //   try {
   //     email = `${req.body.email}`;
   //     subject = `${req.body.subject}`;
@@ -45,7 +45,6 @@ app.all('*', (req, res) => {
   res.sendStatus(404);
 });
 
-app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router); // path must route to lambda
 
 app.listen(PORT, () => {
