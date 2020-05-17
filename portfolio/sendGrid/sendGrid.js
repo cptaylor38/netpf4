@@ -16,16 +16,25 @@ app.post('/.netlify/functions/sendGrid/email', async (req, res) => {
       from: 'cylor.dev@gmail.com',
       subject: `Portfolio alert`,
       text: 'Someone has sent you a message from your portfolio.',
-      html: `<h2>${req.body.email}</h2>
-            <h3>${req.body.subject}</h3>
-            <h4>${req.body.message}</h4>`,
+      html: `<h2>{{email}}${req.body.email}</h2>
+            <h3>{{subject}}${req.body.subject}</h3>
+            <h4>{{message}}${req.body.message}</h4>`,
       dynamic_template_data: {
         email: req.body.email,
         subject: req.body.subject,
         message: req.body.message,
       },
+      personalizations: [
+        {
+          substitutions: {
+            email: req.body.email,
+            subject: req.body.subject,
+            message: req.body.message,
+          },
+        },
+      ],
     };
-    await sgMail.send(msg).then((response) => res.send(response.body));
+    await sgMail.send(msg).then((response) => res.send(response));
   } catch (error) {
     console.log(error);
   }
