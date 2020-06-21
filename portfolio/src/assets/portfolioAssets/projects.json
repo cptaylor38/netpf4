@@ -1,14 +1,10 @@
 [
   {
-    "title": "Wordstock",
-    "githubLink": "https://github.com/cptaylor38/Wordstock",
-    "deployedLink": "https://wordstock-app.herokuapp.com/",
-    "body": "A small translator/dictionary/thesaraus using plain html/css/javascript. Translate a phrase from English to a number of different languages using the MyMemory translation api which takes user-submitted data to determine the closest translation match. The dictionary portion uses WordsApi and provides multiple definitions and synonyms (also user-submitted) with associated definitions for your word of choice. It was my first project learning about web development. My role was api consumption, wiring and event handling, and overall functionality.",
-    "images": [
-      "wordstockLanding.png",
-      "wordstockDictionary.png",
-      "wordstockTranslate.png"
-    ],
+    "title": "Penny",
+    "githubLink": "https://github.com/cptaylor38/Penny",
+    "deployedLink": "https://penny-checkbook.herokuapp.com/",
+    "body": "A MERN stack expense/budget managing app. Uses a Gmail Passport strategy for login and authentication, gsap for some minor animations, and Chart.js for some analytics visuals. Add your salary and expenses, monthly or one time charges, to the cateogry that helps you stay more organized. The overview provides pie charts representing your total expenses for each monthly and non-monthly and gives you a rundown of your total expenses with regards to your monthly income.",
+    "images": ["pennyLanding.png", "pennyExpense.png", "pennyOverview.png"],
     "id": 1
   },
   {
@@ -20,19 +16,31 @@
     "id": 2
   },
   {
+    "title": "The Backyard Retreat",
+    "githubLink": "https://github.com/cptaylor38/byrsample",
+    "deployedLink": "https://nervous-khorana-ffc875.netlify.app/",
+    "body": "Redesigned the website of a local home and garden business. Original site found here: thebackyardretreat.com",
+    "images": ["byrHome.png", "byrAbout.png", "byrTest.png", "byrTips.png"],
+    "id": 3
+  },
+  {
+    "title": "Wordstock",
+    "githubLink": "https://github.com/cptaylor38/Wordstock",
+    "deployedLink": "https://wordstock-app.herokuapp.com/",
+    "body": "A small translator/dictionary/thesaraus using plain html/css/javascript. Translate a phrase from English to a number of different languages using the MyMemory translation api which takes user-submitted data to determine the closest translation match. The dictionary portion uses WordsApi and provides multiple definitions and synonyms (also user-submitted) with associated definitions for your word of choice. It was my first project learning about web development. My role was api consumption, wiring and event handling, and overall functionality.",
+    "images": [
+      "wordstockLanding.png",
+      "wordstockDictionary.png",
+      "wordstockTranslate.png"
+    ],
+    "id": 4
+  },
+  {
     "title": "Scraps",
     "githubLink": "https://github.com/cptaylor38/scraps",
     "deployedLink": "https://scrapsproject.herokuapp.com/",
     "body": "A fun-themed site, admittedly lacking in responsiveness and built last minute. It was my final group project during my coding bootcamp and my first experience with React. We experienced a number of setbacks during our concept phase of our final project and threw this together. Preview songs with the spotify api, record notes or write down songs you discover with MongoDb, and enjoy a blast from the past with this retro themed amalgamation. My role involved React integration, API development and consumption, fixing Firebase auth persistence, and user experience. It may not be the prettiest, or most intuitive, but it was a lot of fun to build.",
     "images": ["scrapsLogin.png", "scrapsHome.png", "scrapsPreview.png"],
-    "id": 3
-  },
-  {
-    "title": "Penny",
-    "githubLink": "https://github.com/cptaylor38/Penny",
-    "deployedLink": "https://penny-checkbook.herokuapp.com/",
-    "body": "A MERN stack expense/budget managing app. Uses a Gmail Passport strategy for login and authentication, gsap for some minor animations, and Chart.js for some analytics visuals. Add your salary and expenses, monthly or one time charges, to the cateogry that helps you stay more organized. The overview provides pie charts representing your total expenses for each monthly and non-monthly and gives you a rundown of your total expenses with regards to your monthly income.",
-    "images": ["pennyLanding.png", "pennyExpense.png", "pennyOverview.png"],
-    "id": 4
+    "id": 5
   }
 ]
