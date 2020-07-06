@@ -12,7 +12,7 @@ ReactDOM.render(
       <meta name='title' content='Corbin Taylor Portfolio'></meta>
       <meta name='robots' content='index, follow'></meta>
       <link
-        icon='icon'
+        icon='shortcut icon'
         href={require('./assets/images/selfietestimg4.svg')}
       ></link>
       <meta
