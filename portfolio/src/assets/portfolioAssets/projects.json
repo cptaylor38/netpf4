@@ -18,7 +18,7 @@
   {
     "title": "The Backyard Retreat",
     "githubLink": "https://github.com/cptaylor38/byrsample",
-    "deployedLink": "https://nervous-khorana-ffc875.netlify.app/",
+    "deployedLink": "https://thebackyardretreat.netlify.app/",
     "body": "Redesigned the website of a local home and garden business. Original site found here: www.thebackyardretreat.com",
     "images": ["byrHome.png", "byrAbout.png", "byrTest.png", "byrTips.png"],
     "id": 3
